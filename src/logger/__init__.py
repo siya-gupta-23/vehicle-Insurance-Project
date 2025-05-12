@@ -23,7 +23,8 @@ def configure_logger():
     logger.setLevel(logging.DEBUG)
 
     #Define Formatter
-    formatter = logging.Formatter("[%(ascrime)s]%(name)s - %(levelname)s - %(message)s")
+    formatter = logging.Formatter("[%(asctime)s] %(name)s - %(levelname)s - %(message)s")
+
 
     #File hanDLER with rotation
     file_handler = RotatingFileHandler(log_file_path,maxBytes=MAX_LOG_SIZE,backupCount=BACKUP_COUNT)
